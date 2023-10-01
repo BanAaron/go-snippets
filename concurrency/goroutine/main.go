@@ -6,7 +6,8 @@ import (
 )
 
 func main() {
-	// to call a go routine all we need to do is put "go" in front of the function call
+	// to call a go routine all we need to do is put "go" in front of the
+	// function call
 	go greeter("aaron")
 	greeter("steve")
 }

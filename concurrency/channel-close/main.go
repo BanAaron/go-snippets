@@ -8,6 +8,7 @@ import (
 func main() {
 	channel := make(chan int)
 	go count(10, channel)
+	go count(10, channel)
 	// we can iterate over a channel
 	for v := range channel {
 		fmt.Println(v)

@@ -16,5 +16,6 @@ func main() {
 }
 
 func doubler(number int, channel chan int) {
+	// add to the channel like this
 	channel <- number * 2
 }
