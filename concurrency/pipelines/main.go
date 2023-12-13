@@ -7,7 +7,7 @@ func main() {
 	// stage 1
 	dataChannel := sliceToChannel(nums)
 	// stage 2
-	finalChannel := sq(dataChannel)
+	finalChannel := square(dataChannel)
 	// stage 3
 	for n := range finalChannel {
 		fmt.Println(n)
@@ -25,7 +25,7 @@ func sliceToChannel(nums []int) <-chan int {
 	return out
 }
 
-func sq(in <-chan int) <-chan int {
+func square(in <-chan int) <-chan int {
 	out := make(chan int)
 	go func() {
 		for n := range in {
